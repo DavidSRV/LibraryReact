@@ -1,0 +1,33 @@
+.bookContainer {
+    display: flex;
+    flex-direction: row;
+    margin: 40px 100px;
+}
+
+.bookItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 30px;
+    color: #6d326d;
+    text-decoration: none;
+
+    & :hover {
+        transform: scale(1.1);
+    }
+}
+
+#letters {
+    margin: 20px;
+    color: black;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.img{
+    -webkit-box-shadow: 5px 4px 11px 4px #000000; 
+box-shadow: 5px 4px 11px 4px #C0C0C0;
+}
