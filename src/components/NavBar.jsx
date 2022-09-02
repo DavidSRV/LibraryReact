@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import '../sass/style.scss'
 
 function NavBar() {
   return (
-    <div>
-        <Link to="/" >Home</Link>
-        <Link to="/Create" >Create</Link>
+    <div className="navContainer">
+        <Link className="linkStyle" to="/" >Home</Link>
+        <Link className="linkStyle" to="/Create" >Create</Link>
     </div>
   );
 }

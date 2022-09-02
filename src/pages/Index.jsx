@@ -8,9 +8,12 @@ export default function Index() {
 
   const title = store.items.map((item) => (<Book key={item.id} item={item} />));
 
+
   return (
     <Layout>
-      <div className="bookContainer">{title}</div>
+      <div className="bookContainer">
+        {title.length === 0 ? 'Guarda Aquí tus libros presionando el botón create' : title }
+      </div>
     </Layout>
   );
 }
