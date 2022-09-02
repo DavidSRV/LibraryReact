@@ -2,6 +2,7 @@ import Layout from "../components/Layout";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useAppcontext } from "../store/Store";
+import "../sass/style.scss";
 
 export default function View() {
   const [item, setItem] = useState(null);
@@ -18,14 +19,22 @@ export default function View() {
   }
 
   return (
-    <div className="">
+    <div>
       <Layout>
-        <h2>{item?.title}</h2>
-        <div>{item?.cover ? <img src={item.cover} width="400" /> : ""}</div>
-        <div>{item?.author}</div>
-        <div>{item?.intro}</div>
-        <div>{item?.completed ? "Leído" : "Por Terminar"}</div>
-        <div>{item?.review}</div>
+        <div className="viewContainer">
+          <div>
+            <h2 style={{ textAlign: "center" }}>{item?.title}</h2>
+            <div>{item?.cover ? <img src={item.cover} width="400" /> : ""}</div>
+          </div>
+          <div className="infoViewContainer">
+            <div>{`Written by: ${item?.author}`}</div>
+            <div> {`Introduction: ${item?.intro}`}</div>
+            <div style={{ fontWeight: "700", marginTop: "10px" }}>{`Estate: ${
+              item?.completed ? "Read" : "About to finish"
+            }`}</div>
+            <div>{item?.review}</div>
+          </div>
+        </div>
       </Layout>
     </div>
   );

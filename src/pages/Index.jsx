@@ -12,7 +12,7 @@ export default function Index() {
   return (
     <Layout>
       <div className="bookContainer">
-        {title.length === 0 ? 'Guarda Aquí tus libros presionando el botón create' : title }
+        {title.length === 0 ? 'Guarda Aquí tus libros presionando el botón de create' : title }
       </div>
     </Layout>
   );
